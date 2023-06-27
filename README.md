@@ -8,7 +8,7 @@ This project is submitted for Future Talent Ready Internship!
 Education-Technology (Ed-Tech)
 
 ## Project Title
-Automating Azure integration into XDR tools like Splunk and SentinelOne
+Automating Azure integration into XDR tools like SentinelOne, Sophos and Splunk.
 
 ## Problem Statement/ Opportunity
 Creating an Executable script for integrating Threat Intelligence and Analysis, XDR platforms like SentinelOne, and Splunk, into Azure using Azure Blob Storage having endpoint set at GitHub to execute it as and when required by selecting options like 1. for SentinelOne, 2. For Sophos and, 3. For Splunk.
