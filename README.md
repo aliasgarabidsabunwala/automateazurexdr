@@ -29,3 +29,4 @@ Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the 
 ## Primary Azure Technology
       1. Azure Blob Storage
       2. Azure Pipelines
+      3. Microsoft Sentinel
