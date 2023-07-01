@@ -32,38 +32,26 @@ Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the 
       3. Azure Pipelines
       4. Microsoft Sentinel
 
-# To create scripts in Azure using GitHub integration, follow these steps:
+# To create scripts in Azure using GitHub integration to integrate XDR (Extended Detection and Response) tools like SentinelOne, Sophos, and Splunk, you can follow these general steps:
 
-1. Set up a GitHub repository:
-   - Go to GitHub (https://github.com/) and sign in or create a new account if needed.
-   - Create a new repository or select an existing repository where you want to store your scripts.
-   - Clone the repository to your local development environment using Git.
+1. Set up a GitHub repository: Create a new repository in GitHub or use an existing one to host your scripts. This repository will be used to version control and manage your code.
 
-2. Set up Azure DevOps:
-   - Go to the Azure DevOps portal (https://dev.azure.com/) and sign in or create a new account if needed.
-   - Create a new project or select an existing project where you want to manage your scripts.
-   - In the Azure DevOps project, go to the "Pipelines" section.
+2. Set up Azure Automation: Azure Automation provides a cloud-based automation and configuration service. It allows you to create, monitor, and deploy runbooks, which are a set of scripts that perform specific tasks. Set up an Azure Automation account in the Azure portal if you haven't done so already.
 
-3. Create a pipeline:
-   - Click on "New Pipeline" to create a new pipeline.
-   - Select the appropriate repository where you cloned your scripts from GitHub.
-   - Choose the repository and branch you want to use for the pipeline.
+3. Connect Azure Automation to GitHub: In the Azure portal, navigate to your Azure Automation account and go to the "Source control" section. Configure the connection to your GitHub repository, allowing Azure Automation to synchronize the scripts from the repository.
 
-4. Configure the pipeline:
-   - Choose the pipeline configuration option that suits your needs. This can include templates, classic editor, or YAML-based configuration.
-   - Specify the build steps and tasks required for your script execution. This can include tasks like setting up the environment, installing dependencies, and executing the scripts.
+4. Create a runbook: In Azure Automation, create a new runbook for each XDR tool you want to integrate. A runbook is essentially a script that contains the logic and instructions for automating tasks.
 
-5. Integrate with Azure resources:
-   - Within the pipeline tasks, you can use Azure-specific tasks to interact with Azure resources.
-   - For example, you can use the Azure CLI task to run Azure CLI commands, the Azure PowerShell task to run PowerShell scripts against Azure, or the Azure Resource Group Deployment task to deploy Azure resources using ARM templates.
+5. Write the script: Use the scripting language supported by Azure Automation (PowerShell, Python, or PowerShell Workflow) to write the script for each runbook. The exact script content will depend on the specific integration requirements of the XDR tool you are working with.
 
-6. Define triggers and schedules:
-   - Configure triggers and schedules to control when the pipeline should run.
-   - Triggers can be set up to execute the pipeline on every commit, on a specific branch, or based on other events.
-   - Schedules allow you to specify a recurring time or interval for running the pipeline.
+6. Integrate the XDR tool: Inside the runbook script, you'll need to incorporate the necessary code and API calls to interact with the XDR tool's API or SDK. This integration code will depend on the specific tool you are working with. Refer to the documentation provided by each XDR tool to understand the API or SDK capabilities and how to interact with it.
 
-7. Save and run the pipeline:
-   - Save the pipeline configuration and trigger a manual run to test the pipeline.
-   - The pipeline will fetch the scripts from the GitHub repository, execute the defined tasks, and interact with Azure resources as per the configuration.
+7. Test and debug: Test your script by running it manually or using Azure Automation's testing capabilities. Ensure that the script executes as expected and performs the desired integration tasks with the XDR tool.
 
-By following these steps, you can create scripts in Azure using GitHub integration and automate their execution using Azure DevOps pipelines. The integration allows you to version control your scripts, collaborate with others, and automate the deployment and execution of your Azure-related tasks.
+8. Commit and push changes to GitHub: Once you are satisfied with the script, commit and push the changes to your GitHub repository. Azure Automation will automatically synchronize the updated scripts.
+
+9. Schedule and automate: In Azure Automation, you can schedule the execution of runbooks based on specific time intervals or trigger them based on events. Configure the scheduling and automation settings according to your requirements.
+
+10. Monitor and troubleshoot: Monitor the execution of your runbooks in Azure Automation to ensure they are running correctly and handling any errors or exceptions. Use the logging and monitoring features provided by Azure Automation to troubleshoot any issues that may arise.
+
+By following these steps, you can create scripts in Azure using GitHub integration to integrate XDR tools like SentinelOne, Sophos, and Splunk, automating various security-related tasks and leveraging the capabilities of these tools. Remember to refer to the documentation and resources provided by each XDR tool for detailed instructions on their integration and scripting capabilities.
