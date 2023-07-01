@@ -37,6 +37,8 @@ Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the 
 1. Set up an Azure environment:
    - Create an Azure subscription if you don't have one already.
    - Set up an Azure resource group to organize your resources.
+     ![image](https://github.com/aliasgarabidsabunwala/automateazurexdr/assets/67218125/e9f22a0d-5126-4046-890c-7ac2448a501f)
+
    - Provision the necessary Azure services like virtual machines or Azure Functions for executing your scripts.
 
 2. Set up a GitHub repository:
