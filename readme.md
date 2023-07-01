@@ -27,11 +27,12 @@ This project is useful for people who don't have time to follow official steps f
 Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the problem statement/opportunity area.
 
 ## Primary Azure Technology
-      1. Azure Blob Storage
-      2. Azure Pipelines
-      3. Microsoft Sentinel
+      1. Azure DevOps
+      2. Azure Blob Storage
+      3. Azure Pipelines
+      4. Microsoft Sentinel
 
-# To create scripts in Azure using GitHub integration, you can follow these steps:
+# To create scripts in Azure using GitHub integration, follow these steps:
 
 1. Set up a GitHub repository:
    - Go to GitHub (https://github.com/) and sign in or create a new account if needed.
