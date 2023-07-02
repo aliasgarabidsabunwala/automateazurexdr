@@ -47,6 +47,10 @@ Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the 
    - Set up an Azure resource group to organize your resources.
      ![image](https://github.com/aliasgarabidsabunwala/automateazurexdr/assets/67218125/54e3454c-9f4a-4bd2-9a7e-fde7ae48efbf)
    - Provision the necessary Azure services like Azure Functions for executing our scripts.
+     ![image](https://github.com/aliasgarabidsabunwala/automateazurexdr/assets/67218125/0e330f30-9d5f-461b-97d4-d602d9e172af)
+
+     Figure - App Function Relationship Diagram
+
 
 2. Set up a GitHub repository:
    - Create a GitHub repository to host your scripts.
