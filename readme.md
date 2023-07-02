@@ -46,7 +46,7 @@ Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the 
    - Create an Azure subscription if you don't have one already.
    - Set up an Azure resource group to organize your resources.
      ![image](https://github.com/aliasgarabidsabunwala/automateazurexdr/assets/67218125/54e3454c-9f4a-4bd2-9a7e-fde7ae48efbf)
-   - Provision the necessary Azure services like virtual machines or Azure Functions for executing your scripts.
+   - Provision the necessary Azure services like Azure Functions for executing our scripts.
 
 2. Set up a GitHub repository:
    - Create a GitHub repository to host your scripts.
@@ -54,7 +54,7 @@ Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the 
 
 3. Create your integration scripts:
    - Determine the specific actions you want to perform with each XDR tool (SentinelOne, Sophos, Splunk) and the corresponding APIs or SDKs provided by each tool.
-   - Choose a scripting language like PowerShell or Python to write your scripts.
+   - Choose a scripting language like PowerShell or Python to write our scripts.
    - Use the relevant APIs or SDKs to interact with the XDR tools and perform the desired actions.
 
 4. Store your scripts in the GitHub repository:
