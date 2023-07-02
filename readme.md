@@ -36,9 +36,11 @@ Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the 
 
 ## Primary Azure Technology
       1. Azure App Function
-      2. Azure Blob Storage
-      3. Azure Pipelines
-      4. Microsoft Sentinel
+      2. Microsoft Sentinel
+
+## Secondary Azure Technology
+      1. Azure Event Hub
+      2. Web-hook
 
 # To create scripts in Azure using GitHub integration to integrate XDR (Extended Detection and Response) tools like SentinelOne, Sophos, and Splunk, we follow these steps:
 
