@@ -35,12 +35,12 @@ This project is useful for people who don't have time to follow official steps f
 Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the problem statement/opportunity area.
 
 ## Primary Azure Technology
-      1. Azure DevOps
+      1. Azure App Function
       2. Azure Blob Storage
       3. Azure Pipelines
       4. Microsoft Sentinel
 
-# To create scripts in Azure using GitHub integration to integrate XDR (Extended Detection and Response) tools like SentinelOne, Sophos, and Splunk, you can follow these general steps:
+# To create scripts in Azure using GitHub integration to integrate XDR (Extended Detection and Response) tools like SentinelOne, Sophos, and Splunk, we follow these steps:
 
 1. Set up an Azure environment:
    - Create an Azure subscription if you don't have one already.
@@ -60,6 +60,36 @@ Yes, the project’s purpose and basic functionality is PERFECTLY mapped to the 
    - Determine the specific actions you want to perform with each XDR tool (SentinelOne, Sophos, Splunk) and the corresponding APIs or SDKs provided by each tool.
    - Choose a scripting language like PowerShell Core to write our scripts.
    - Use the relevant APIs or SDKs to interact with the XDR tools and perform the desired actions.
+
+### To integrate SentinelOne into Azure using PowerShell Core
+   -  Make sure to replace the placeholder values with your actual subscription ID, resource group name, Sentinel instance name, and desired location.
+
+- This script installs the Azure Sentinel PowerShell module, connects to your Azure account, creates a new Sentinel instance in the specified resource group and location, and then configures the SentinelOne data connector for that instance.
+
+- You can customize the script further to meet your specific requirements, such as configuring additional data connectors or performing other tasks within Azure Sentinel. Additionally, make sure you have the necessary permissions and prerequisites in your Azure environment to create and configure resources.
+
+### To integrate Sophos into Azure using PowerShell Core
+            - This part in the script assumes that you have already authenticated to Azure using `Connect-AzAccount` and provided the necessary authentication for your Sophos API token (`$apiToken`) and subscription ID (`$subscriptionId`).
+            
+            - Here's a breakdown of the script:
+            
+            1. Authenticate to Azure using `Connect-AzAccount`.
+            2. Define the Azure resource group name (`$resourceGroupName`) and location (`$location`) where the resources will be deployed.
+            3. Create a new resource group using `New-AzResourceGroup`.
+            4. Create a new Azure storage account using `New-AzStorageAccount`.
+            5. Get the connection string of the storage account using `Get-AzStorageAccountKey`.
+            6. Create a new Azure Function App using `New-AzFunctionApp`.
+            7. Deploy the Sophos integration code to the Function App using `Publish-AzWebapp`. Make sure to specify the correct path to your Sophos Function App code (`$functionAppFolder`).
+            8. Get the Function App URL using `Get-AzWebApp`.
+            9. Configure Sophos to send events to the Function App URL by creating a webhook. This is done by making a POST request to the Soph
+
+### To integrate Splunkk into Azure using PowerShell Core
+   -  This part in the script assumes that you have already authenticated to Azure using Connect-AzAccount and provided the necessary authentication for your Splunk HEC token ($splunkHecToken).
+
+Here's a breakdown of the script:
+
+- Authenticate to Azure using Connect-AzAccount.
+- Define the Azure resource group name (`$resourceGroupName
 
 4. Store your scripts in the GitHub repository:
    - Commit and push your scripts to the GitHub repository.
